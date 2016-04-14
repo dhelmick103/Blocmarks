@@ -10,7 +10,6 @@ class Topics::BookmarksController < ApplicationController
   def edit
     @topic = Topic.find(params[:topic_id])
     @bookmark = Bookmark.find(params[:id])
-    @bookmark.save
   end
 
   def destroy
