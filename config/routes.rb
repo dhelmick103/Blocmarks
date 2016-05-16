@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
   resources :topics do
-    resources :bookmarks, except: [:index], controller: 'topics/bookmarks' 
+    resources :bookmarks, except: [:index], controller: 'topics/bookmarks'
   end
+
+  post :incoming, to: 'incoming#create'
 
   devise_for :users
 
