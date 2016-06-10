@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+   def show
+     @user_bookmarks = current_user.bookmarks
+     @liked_bookmarks = current_user.liked_bookmarks
+   end
+
    # POST /users
    # POST /users.json
    def create

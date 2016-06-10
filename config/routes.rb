@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
+
   get 'likes/index'
 
   resources :topics do
@@ -11,6 +13,10 @@ Rails.application.routes.draw do
   post :incoming, to: 'incoming#create'
 
   devise_for :users
+
+  resources :users, only: [:show]
+
+  get 'users/show'
 
   get 'welcome/index'
 
