@@ -11,6 +11,7 @@
         <div class="media-body">
           <h4 class="media-heading">
             <%= render partial: 'likes/like', locals: { bookmark: bookmark, topic: @topic } %> <%= link_to bookmark.url, bookmark.url, :target => '_blank' %>
+            <a class="embedly-card" href=<%= bookmark.url %> data-card-theme='light'></a>
             <% if policy(bookmark).update? %>
               <%= link_to "Edit", edit_topic_bookmark_path(@topic, bookmark), class: 'btn btn-success' %>
               <%= link_to "Delete", bookmark.topic, method: :delete, class: 'btn btn-danger' %>
@@ -20,3 +21,6 @@
       </div>
     <% end %>
 </div>
+<script>
+  $('.embedly-card').embedly({key: '4db33ac1eae74963b168881ac61884ba'})
+</script>

@@ -1,2 +1,29 @@
-<h1>Welcome to Blocmarks!</h1>
-<p>A Social Media site with email integration!</p>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>Blocmarks!</h1>
+    <p>A Social Media Site With Email Integration!</p>
+    <%= link_to "Learn More", welcome_about_path, class:  "btn btn-lg btn-primary"  %>
+  </div>
+</div>
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Track Your Boomarks</h2>
+      <p>Blocmarks is designed to track your bookmarks and topics so that you don't have to. What are you waiting for? Get started today!</p>
+      <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-default" %>
+    </div>
+    <div class="col-md-4">
+      <h2>Access The Bookmark Library</h2>
+      <p>Track all of your bookmarks by topics</p>
+      <%= link_to "Topics", topics_path, class: "btn btn-default" %>
+   </div>
+    <div class="col-md-4">
+      <h2>About Blocmarks</h2>
+      <p>Learn more about Blocmarks</p>
+      <%= link_to "About Blocmarks", welcome_about_path, class: "btn btn-default" %>
+    </div>
+  </div>
+
+  <hr>

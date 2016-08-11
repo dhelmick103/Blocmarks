@@ -44,3 +44,5 @@ source 'https://rubygems.org'
  gem 'devise'
  # Pundit
  gem 'pundit'
+ # Embedly
+ gem 'embedly'

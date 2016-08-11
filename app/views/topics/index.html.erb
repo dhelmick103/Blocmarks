@@ -10,11 +10,13 @@
               <br>
               <br>
               <% topic.bookmarks.each do |bookmark| %>
-                <h5><%= link_to bookmark.url, bookmark.url, :target => '_blank' %></h5>
+                <%= image_tag(bookmark.thumbnail_url) %>
+                <%= link_to bookmark.title, bookmark.url, :target => '_blank' %>
                 <br>
               <% end %>
           </h4>
         </div>
       </div>
     <% end %>
+  </div>
 </div>
